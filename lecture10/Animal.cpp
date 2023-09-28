@@ -8,11 +8,6 @@ Animal::Animal(string name, int age)
     cout << "Animal constructor..." << endl;
 }
 
-void Animal::speak()
-{
-    cout << "Animal says hello..." << endl;
-}
-
 void Animal::eat()
 {
     cout << "Nom Nom Nom..." << endl;

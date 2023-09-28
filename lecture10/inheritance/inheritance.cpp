@@ -28,7 +28,7 @@ public:
         parentFunctionality();
         cout << "childFunctionality() called..." << endl;
         childPrivateData = 20;
-        // parentPrivateData = 30;   // Don't have access to parent private data.
+        //parentPrivateData = 30;   // Don't have access to parent private data.
     }
 private:
     int childPrivateData = 456;
@@ -44,9 +44,9 @@ public:
     void grandChildFunctionality() 
     {
         cout << "childFunctionality() called..." << endl;
-        //parentFunctionality();
+        parentFunctionality();
         childFunctionality();
-        // childPrivateData = 20;
+         //childPrivateData = 20;
         // parentPrivateData = 30;   // Don't have access to parent private data.
     }
 private:
@@ -58,12 +58,12 @@ int main()
     // Create a new instance of the child class.
     Child childInstance;
 
-    //childInstance.childFunctionality();
-    //childInstance.parentFunctionality();
+    childInstance.childFunctionality();
+    childInstance.parentFunctionality();
 
     GrandChild grandChildInstance;
     //grandChildInstance.parentFunctionality();
-    //grandChildInstance.childFunctionality();
-    //grandChildInstance.grandChildFunctionality();
+    grandChildInstance.childFunctionality();
+    grandChildInstance.grandChildFunctionality();
 
 }

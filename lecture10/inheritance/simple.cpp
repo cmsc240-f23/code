@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
 
-class Parent 
+class Parent  
 {
 public:
     Parent()
     {
         cout << "1. Parent class under construction." << endl;
+    }
+    ~Parent()
+    {
+        cout << "Parent class destruction." << endl;
     }
 };
  
@@ -16,6 +20,10 @@ public:
     Child()
     {
         cout << "2. Child class under construction." << endl;
+    }
+    ~Child()
+    {
+        cout << "Child class destruction." << endl;
     }
 };
 

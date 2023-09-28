@@ -2,7 +2,7 @@
 #include "Cat.h"
 using namespace std;
 
-Cat::Cat(std::string name, int age, float wiskerLength)
+Cat::Cat(std::string name, int age, float whiskerLength)
 : Animal(name, age), whiskerLength{whiskerLength}
 {
     cout << "Cat constructor..." << endl;

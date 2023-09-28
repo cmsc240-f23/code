@@ -1,0 +1,9 @@
+    
+    #include "Bird.h"
+    #include "Rabbit.h"
+    #include "Iguana.h"
+
+    Rabbit bunny{"Bunny", 2, 5.4};
+    Bird carrot{"Carrot", 2, "Orange and Green", "parrot", "Prefer Not to Answer"};
+    Iguana larry{"Larry", 99, "Cuban Rock Iguana", 79};
+
