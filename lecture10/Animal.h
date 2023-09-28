@@ -8,7 +8,7 @@ public:
     Animal(std::string name, int age);
     void eat();
     void setFavoriteFood(std::string favorite);
-    virtual void speak() = 0;
+    void speak();
 private:
     std::string name;
     int age;
