@@ -1,11 +1,10 @@
 #include "PolarBear.h"
-#include "Animal.h"
 #include <iostream>
 
 using namespace std;
 
-PolarBear::PolarBear(std::string name, int age, int weight) 
-: Animal(name, age), weight{weight}, numFriends{numFriends}
+PolarBear::PolarBear(std::string name, int age, int weight, float furLength) 
+: Animal{name, age}, weight{weight}, furLength{furLength}
 {
     
 }
@@ -13,10 +12,6 @@ PolarBear::PolarBear(std::string name, int age, int weight)
 int PolarBear::getWeight()
 {
     return weight;
-}
-
-void PolarBear::getNumFriends() {
-    cout << "Polar Bear has " << numFriends << " friends!" << endl;
 }
 
 void PolarBear::speak(){

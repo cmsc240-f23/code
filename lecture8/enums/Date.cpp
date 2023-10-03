@@ -15,6 +15,7 @@ bool Date::is_valid()
 void Date::add_day(int num)
 {
     // Add day to date...
+    day += num;
 }
 
 
