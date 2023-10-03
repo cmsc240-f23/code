@@ -12,6 +12,8 @@ int main()
     int result3 = area(7, 10);		// ok
 
     int result4 = area(7.5, 10);	// ok, but dangerous: 7.5 truncated to 7
+                                    // the compiler will warn you if you use
+                                    // the -Wconversion warning option
 
     int result5 = area(10, -7); 	// ok, but this is a difficult case:
                                     // the types are correct,
