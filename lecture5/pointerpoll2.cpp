@@ -17,6 +17,8 @@ int main()
     function(&value, value);
 
     cout << value << endl;
+
+    return 0;
 }
 
 

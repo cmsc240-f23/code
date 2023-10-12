@@ -47,9 +47,9 @@ int main()
         int result = area(l, w);
         cout << "Area == " << result << endl;
     }
-    catch (InvalidAreaArgumentsException &ex)
+    catch (InvalidAreaArgumentsException &execpt)
     {
-        cout << ex.message() << endl;
+        cout << execpt.message() << endl;
     }
 
     return 0;
