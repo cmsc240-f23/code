@@ -23,7 +23,7 @@ int main()
     cin >> url;
 
     // Define a regular expression pattern for URL validation
-    regex pattern{"YOUR REGEX PATTERN HERE"};
+    regex pattern{R"(   YOUR REGEX PATTERN HERE   )"};
 
     if (regex_match(url, pattern)) 
     {

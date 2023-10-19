@@ -22,7 +22,7 @@ int main()
     cin >> zipcode;
 
     // Define a regular expression pattern for ZIP code validation
-    regex pattern{"YOUR REGEX PATTERN HERE"};
+    regex pattern{R"(   YOUR REGEX PATTERN HERE   )"};
 
     if (regex_match(zipcode, pattern)) 
     {

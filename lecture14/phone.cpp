@@ -20,10 +20,10 @@ int main()
 {
     string phone;
     cout << "Enter a phone number: ";
-    cin >> phone;
+    getline(cin, phone);
 
     // Define a regular expression pattern for phone number validation
-    regex pattern{"YOUR REGEX PATTERN HERE"};
+    regex pattern{R"(   YOUR REGEX PATTERN HERE   )"};
 
     if (regex_match(phone, pattern)) 
     {

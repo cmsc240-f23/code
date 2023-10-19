@@ -19,10 +19,10 @@ int main()
 {
     string credit;
     cout << "Enter a credit card number: ";
-    cin >> credit;
+    getline(cin, credit);
 
     // Define a regular expression pattern for credit validation
-    regex pattern{"YOUR REGEX PATTERN HERE"};
+    regex pattern{R"(   YOUR REGEX PATTERN HERE   )"};
 
     if (regex_match(credit, pattern)) 
     {

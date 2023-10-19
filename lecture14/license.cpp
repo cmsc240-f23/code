@@ -21,10 +21,10 @@ int main()
 {
     string license;
     cout << "Enter a license plate: ";
-    cin >> license;
+    getline(cin, license);
 
     // Define a regular expression pattern for license validation
-    regex pattern{"YOUR REGEX PATTERN HERE"};
+    regex pattern{R"(   YOUR REGEX PATTERN HERE   )"};
 
     if (regex_match(license, pattern)) 
     {

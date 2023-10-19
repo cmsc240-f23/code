@@ -23,7 +23,7 @@ int main()
     cin >> date;
 
     // Define a regular expression pattern for date validation
-    regex pattern{"YOUR REGEX PATTERN HERE"};
+    regex pattern{R"(   YOUR REGEX PATTERN HERE   )"};
 
     if (regex_match(date, pattern)) 
     {
