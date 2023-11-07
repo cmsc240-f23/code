@@ -2,7 +2,7 @@
 #include <memory> 
 using namespace std;
 
-void function(shared_ptr<int> shared)
+void function(shared_ptr<int>& shared)
 {
     shared_ptr<int> second = shared;     // reference count: 2
     cout << *second << endl;
