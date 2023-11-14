@@ -3,38 +3,43 @@
 #include <fstream>
 using namespace std;
 
-
+// Test file system library. 
 int main() 
 {
     string directoryPath = "./files"; 
 
-    try {
-        for (const filesystem::directory_entry& entry : filesystem::directory_iterator(directoryPath)) 
+    try 
+    {
+        for (const filesystem::directory_entry& directoryEntry : filesystem::directory_iterator(directoryPath)) 
         {
-            if (entry.is_regular_file()) 
+            // If this is a regular file and not a directory.
+            if (directoryEntry.is_regular_file()) 
             {
-                cout << "File: " << entry.path() << endl;
+                // Print out the file name.
+                cout << "filename==" << directoryEntry.path() << endl;
 
-                ifstream file(entry.path());
+                // Attempt to open the file for reading.
+                ifstream file(directoryEntry.path());
                 if (file.is_open()) 
                 {
                     string line;
+                    // Print out each line in the file.
                     while (getline(file, line)) 
                     {
-                        cout << "\t" << line << endl;
+                        cout << "\t" << "fileline==" << line << endl;
                     }
                     file.close();
                 } 
                 else 
                 {
-                    cerr << "Error opening file: " << entry.path() << endl;
+                    cerr << "Error opening file: " << directoryEntry.path() << endl;
                 }
             }
         }
     } 
-    catch (const exception& e) 
+    catch (exception& except) 
     {
-        cerr << "Error: " << e.what() << endl;
+        cerr << "Error working with files: " << except.what() << endl;
     }
 
     return 0;
