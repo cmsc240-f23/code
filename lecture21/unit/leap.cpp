@@ -17,7 +17,7 @@ bool isLeapYear(int year)
         } 
         else if (year % 400 == 0) 
         {
-            leapYear = false;
+            leapYear = true;
         }
     }
 
