@@ -9,7 +9,7 @@ main.o: main.cpp leap.h
 leap.o: leap.cpp leap.h
 	g++ -Wall leap.cpp -c
 
-leapTest: leapTest.cpp leap.cpp leap.h
+leapTest: leapTest.cpp leap.o
 	g++ leapTest.cpp leap.o -o leapTest
 
 run-unit-tests: leapTest
