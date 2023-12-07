@@ -18,7 +18,7 @@ void process(shared_ptr<Item>& sharedItem)
 
 int main() 
 {
-    shared_ptr<Item> myItem = make_shared<Item>();
+    shared_ptr<Item> myItem(new Item());
 
     cout << "Reference count in main, before function call = " << myItem.use_count() << endl;
 

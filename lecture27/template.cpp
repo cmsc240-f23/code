@@ -2,7 +2,8 @@
 #include <vector>
 using namespace std;
 
-double averageVector(vector<double> vec) 
+template <typename T>
+T averageVector(vector<T> vec) 
 {
     if (vec.empty()) 
     {
@@ -10,9 +11,9 @@ double averageVector(vector<double> vec)
         return 0.0; 
     }
 
-    double sum = 0.0;
+    T sum = 0.0;
 
-    for (double num : vec) 
+    for (T num : vec) 
     {
         sum += num;
     }
